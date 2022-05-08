@@ -123,6 +123,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\GoodsManageArea\Controllers\ListController.cs" />
+    <Compile Include="Areas\GoodsManageArea\GoodsManageAreaAreaRegistration.cs" />
+    <Compile Include="Areas\UserManageArea\UserManageAreaAreaRegistration.cs" />
     <Compile Include="Controllers\FirstController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -145,6 +148,11 @@
     <Content Include="ConfigFiles\log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Areas\UserManageArea\Views\web.config" />
+    <Content Include="Areas\GoodsManageArea\Views\web.config" />
+    <Content Include="Areas\GoodsManageArea\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\GoodsManageArea\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\GoodsManageArea\Views\List\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -176,6 +184,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\GoodsManageArea\Data\" />
+    <Folder Include="Areas\UserManageArea\Controllers\" />
+    <Folder Include="Areas\UserManageArea\Data\" />
+    <Folder Include="Areas\UserManageArea\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h3>ViewBag.user1= @ViewBag.user1</h3>
+<h3>ViewBag.user2= @ViewData["user2"]</h3>
+<h3>ViewBag.user3= @TempData["user3"]</h3>
+<h3>ViewBag.user4= @HttpContext.Current.Session["user4"]</h3>
+
+<h3>ViewBag.user5=@Model </h3>

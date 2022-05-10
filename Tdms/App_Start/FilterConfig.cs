@@ -14,6 +14,8 @@ namespace Tdms
 
             //注册--- 全局异常处理
             filters.Add(new MyExceptionFilterAttribute());
+            // 登录验证
+            filters.Add(new MyAuthorizationFilter());
         }
     }
 }

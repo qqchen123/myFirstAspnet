@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h3> <a href="http://www.baidu.com">baidu</a> </h3>
+
+<br />
+
+<p>新的一行</p>
+
+
+@{
+    for (int i = 0; i < 10; i++)
+    {
+        if (i > 2)
+        {
+            <h3>this is test  @i</h3>
+
+        }
+    }
+}
+
+

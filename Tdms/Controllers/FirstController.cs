@@ -21,9 +21,9 @@ namespace Tdms.Controllers
             base.ViewData["user2"] = "testuser2";
             object model = "qqchen123123";
 
-            //return View(model);
+            return View(model);
 
-            return Redirect("ToIndex");
+            //return Redirect("ToIndex");
 
         }
 

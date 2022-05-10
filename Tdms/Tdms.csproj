@@ -167,6 +167,7 @@
     <Compile Include="Utils\CustomDIFactory.cs" />
     <Compile Include="Utils\Filters\MyActionFilterAttribute.cs" />
     <Compile Include="Utils\Filters\MyCompressionActionFilterAttribute.cs" />
+    <Compile Include="Utils\Filters\MyResultFilterAttribute.cs" />
     <Compile Include="Utils\Logger.cs" />
     <Compile Include="Utils\MyControllerFactory.cs" />
   </ItemGroup>
@@ -224,6 +225,7 @@
     <Content Include="Views\Third\Index.cshtml" />
     <Content Include="Views\Fourth\Index.cshtml" />
     <Content Include="Views\Fourth\About.cshtml" />
+    <Content Include="Views\Fourth\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

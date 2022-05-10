@@ -25,7 +25,10 @@ namespace Tdms.Controllers
         }
 
 
-
+        public ActionResult Home()
+        {
+            return View();
+        }
 
 
     }

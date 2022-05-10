@@ -16,5 +16,16 @@ namespace Tdms.Controllers
         {
             return View();
         }
+
+        [MyCompressionActionFilterAttribute]
+        public ActionResult About()
+        {
+            return View();
+        }
+
+
+
+
+
     }
 }

@@ -11,6 +11,9 @@ namespace Tdms
             filters.Add(new HandleErrorAttribute());
             // 全局注册，对项目中的所有方法都生效
             //filters.Add(new MyActionFilterAttribute());
+
+            //注册--- 全局异常处理
+            filters.Add(new MyExceptionFilterAttribute());
         }
     }
 }

@@ -26,5 +26,14 @@ namespace Tdms
             //定义自己的控制器工厂
             ControllerBuilder.Current.SetControllerFactory(new MyControllerFactory());
         }
+
+
+        // 只要是相应不是200 都能被这里捕捉到；可以捕捉到异常的漏网之鱼
+        protected void Application_Error(object sender,EventArgs e) {
+            Exception exception = Server.GetLastError();
+            Response.Write("System is Error .....");
+            Server.ClearError();
+
+        }
     }
 }

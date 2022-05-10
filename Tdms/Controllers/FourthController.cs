@@ -30,7 +30,8 @@ namespace Tdms.Controllers
             return View();
         }
 
-        [MyHandleErrorAttribute]
+        //[MyHandleErrorAttribute]
+        //[MyExceptionFilterAttribute]
         public ActionResult ExpIndex()
         {
             int i = 1;

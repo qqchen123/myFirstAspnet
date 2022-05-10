@@ -165,6 +165,7 @@
     <Compile Include="Utils\Aop\LogAfterBehavior.cs" />
     <Compile Include="Utils\CustomDIFactory.cs" />
     <Compile Include="Utils\Logger.cs" />
+    <Compile Include="Utils\MyControllerFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

@@ -16,27 +16,32 @@ namespace Tdms.Controllers
 {
     public class ThirdController : Controller
     {
+        private IUserInfo _userInfo = null;
+        //构造函数注入
+        public ThirdController(IUserInfo userInfo) {
+            this._userInfo = userInfo;
+        }
+
+        //属性注入
+        [Dependency]
+        public IUserInfo _userinfoprop { get; set; }
+
+        public IUserInfo _userinfomethod { get; set; }
+
+        //方法注入
+        [InjectionMethod]
+        public void setIUserInfoMethod(IUserInfo userInfo) {
+            _userinfomethod = userInfo;
+        }
+
+
         // GET: Third
         public ActionResult Index()
         {
-            //IUserInfo userInfo = new UserInfoService();
-            //student stu = userInfo.GetUserInfo(1);
-            //return View(stu);
-
-            //ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
-            //fileMap.ExeConfigFilename = Path.Combine(AppDomain.CurrentDomain.BaseDirectory + "ConfigFiles\\unity.config");
-            //Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
-            //UnityConfigurationSection section = (UnityConfigurationSection)configuration.GetSection(UnityConfigurationSection.SectionName);
-            //IUnityContainer container = new UnityContainer();
-            //section.Configure(container, "IQueryContainer");
-
+            //IUnityContainer container = CustomDIFactory.getContainer();
             //IUserInfo userInfo = container.Resolve<IUserInfo>();
-
             //student us = userInfo.GetUserInfo(1);
-            //-------------------------------------------
-            IUnityContainer container = CustomDIFactory.getContainer();
-            IUserInfo userInfo = container.Resolve<IUserInfo>();
-            student us = userInfo.GetUserInfo(1);
+            student us = _userInfo.GetUserInfo(1);
             return View(us);
         }
     }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Tdms.Utils;
 
 namespace Tdms
 {
@@ -21,6 +22,9 @@ namespace Tdms
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);  //注册filter
             RouteConfig.RegisterRoutes(RouteTable.Routes);  //注册路由
             BundleConfig.RegisterBundles(BundleTable.Bundles); //注册bundles --引用js/css需要的组件
+
+            //定义自己的控制器工厂
+            ControllerBuilder.Current.SetControllerFactory(new MyControllerFactory());
         }
     }
 }

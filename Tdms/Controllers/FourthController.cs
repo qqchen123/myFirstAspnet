@@ -7,11 +7,12 @@ using Tdms.Utils.Filters;
 
 namespace Tdms.Controllers
 {
+    //[MyActionFilterAttributeBark] //让控制器下的所有action都生效
     public class FourthController : Controller
     {
         // GET: Fourth
         //[MyActionFilterAttribute]
-        [MyActionFilterAttributeBark]
+        //[MyActionFilterAttributeBark]
         public ActionResult Index()
         {
             return View();

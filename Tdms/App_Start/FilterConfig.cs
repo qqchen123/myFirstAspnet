@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using Tdms.Utils.Filters;
 
 namespace Tdms
 {
@@ -8,6 +9,8 @@ namespace Tdms
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            // 全局注册，对项目中的所有方法都生效
+            //filters.Add(new MyActionFilterAttribute());
         }
     }
 }

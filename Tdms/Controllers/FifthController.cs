@@ -46,5 +46,27 @@ namespace Tdms.Controllers
                 return View();
             }
         }
+
+        [HttpGet]
+        [MyAllowAnonymousAttribute]
+        public ActionResult Logout()
+        {
+            HttpCookie myCookie = HttpContext.Request.Cookies["CurrentUser"];
+            if (myCookie != null) {
+                myCookie.Expires = DateTime.Now.AddMinutes(-1);
+                HttpContext.Response.Cookies.Add(myCookie);
+            }
+            var sessionUser = HttpContext.Session["CurrentUser"];
+            if (sessionUser != null && sessionUser is User) {
+                User user = (User)HttpContext.Session["CurrentUser"];
+            }
+            HttpContext.Session["CurrentUser"] = null;
+            HttpContext.Session.Remove("CurrentUser");
+            HttpContext.Session.Clear();
+            HttpContext.Session.RemoveAll();
+            HttpContext.Session.Abandon();
+
+            return RedirectToAction("Index","Home");
+        }
     }
 }
